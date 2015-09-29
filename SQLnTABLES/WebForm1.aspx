@@ -9,25 +9,32 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
-        <asp:Label ID="NameLabel" runat="server" Text="Name:"></asp:Label>
+        Name:
         <asp:TextBox ID="NameTextBox" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Surname" runat="server" Text="Surname:"></asp:Label>
+        Surname:
         <asp:TextBox ID="SurnameTextBox" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Age" runat="server" Text="Age:"></asp:Label>
+        Age:
         <asp:TextBox ID="AgeTextBox" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Gender" runat="server" Text="Gender:"></asp:Label>
+        Gender:
         <asp:DropDownList ID="GenderDropDownList" AppendDataBoundItems="true" runat="server">
-            <asp:ListItem Text="Male" Value="0"></asp:ListItem>
-            <asp:ListItem Text="Female" Value="1"></asp:ListItem>
+            <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
+            <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
         </asp:DropDownList>
         <br />
         <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_OnClick"/>
         <br/>
-        <asp:GridView ID="GridView" runat="server"></asp:GridView>
+        <asp:GridView ID="GridView" AutoGenerateColumns="False" runat="server">
+            <Columns>
+                <asp:BoundField DataField="ID" HeaderText="ID" />
+                <asp:BoundField DataField="Name" HeaderText="Name" />
+                <asp:BoundField DataField="Surname" HeaderText="Surname"/>
+                <asp:BoundField DataField="Age" HeaderText="Age" />
+                <asp:BoundField DataField="Gender" HeaderText="Gender" />
+            </Columns>
+        </asp:GridView>
     </div>
     </form>
 </body>

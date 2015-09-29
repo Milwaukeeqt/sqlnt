@@ -22,15 +22,6 @@ namespace SQLnTABLES {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// NameLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NameLabel;
-        
-        /// <summary>
         /// NameTextBox control.
         /// </summary>
         /// <remarks>
@@ -38,15 +29,6 @@ namespace SQLnTABLES {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NameTextBox;
-        
-        /// <summary>
-        /// Surname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Surname;
         
         /// <summary>
         /// SurnameTextBox control.
@@ -58,15 +40,6 @@ namespace SQLnTABLES {
         protected global::System.Web.UI.WebControls.TextBox SurnameTextBox;
         
         /// <summary>
-        /// Age control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Age;
-        
-        /// <summary>
         /// AgeTextBox control.
         /// </summary>
         /// <remarks>
@@ -74,15 +47,6 @@ namespace SQLnTABLES {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AgeTextBox;
-        
-        /// <summary>
-        /// Gender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Gender;
         
         /// <summary>
         /// GenderDropDownList control.

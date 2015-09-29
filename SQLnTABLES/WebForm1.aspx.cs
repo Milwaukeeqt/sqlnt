@@ -12,24 +12,21 @@ namespace SQLnTABLES
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        private SqlConnection con;
+        private SqlConnection Con;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                //GenderDropDownList
-            }
-            con = new SqlConnection
+            Con = new SqlConnection
             {
                 ConnectionString = WebConfigurationManager.ConnectionStrings["SQLnTABLES"].ConnectionString
             };
-            con.Open();
 
             var cmd = new SqlCommand
             {
-                Connection = con,
+                Connection = Con,
                 CommandText = "SELECt * FROM Person"
             };
+
+            Con.Open();
 
             var adapter = new SqlDataAdapter(cmd);
             var table = new DataTable();
@@ -38,24 +35,21 @@ namespace SQLnTABLES
 
             GridView.DataSource = table;
             GridView.DataBind();
+
+            Con.Close();
         }
 
         protected void Button1_OnClick(object sender, EventArgs e)
         {
-            var p = new Person
+            var person = new Person
             {
                 Name = NameTextBox.Text,
                 Surname = SurnameTextBox.Text,
                 Age = AgeTextBox.Text,
                 Gender = GenderDropDownList.SelectedValue
             };
-
-            using (var cmd = new SqlCommand())
-            {
-                cmd.Connection = con;
-                cmd.CommandText = p.SqlToString();
-                cmd.ExecuteNonQuery();
-            }
+            person.ExecuteSql(Con);    
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
